@@ -1,4 +1,3 @@
-
 import datetime
 import pymongo
 from flask import Flask,redirect
@@ -105,8 +104,7 @@ def home():
     #Importing all the data from google sheets
     spreadsheet = gc.open_by_key('1SIQtKcit4DgqNiS5QIWMIMAZjq5IePNQlJXmfgHry6k')
     worksheet = spreadsheet.worksheet("Sheet1")
-
     set_with_dataframe(worksheet,User)
-    return redirect("https://docs.google.com/spreadsheets/d/1f1bqRu67rGKzGhvwlJ0LEzckGQDUw-jLArCmcwQew_g/edit?pli=1#gid=1524298655")
+    return redirect("https://docs.google.com/spreadsheets/d/1SIQtKcit4DgqNiS5QIWMIMAZjq5IePNQlJXmfgHry6k/edit#gid=0")
 if __name__ == "__main__":
     app.run(debug=True)
